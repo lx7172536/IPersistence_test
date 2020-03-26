@@ -1,0 +1,14 @@
+<mapper namespace="user">
+
+    <!--sql的唯一标识：namespace.id来组成：statementId-->
+    <select id="selectList">
+        select * from user
+    </select>
+
+    <select id="selectOne">
+        select * from user where id = ? and username = ?
+    </select>
+
+
+
+</mapper>
