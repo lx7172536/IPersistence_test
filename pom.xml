@@ -9,5 +9,11 @@
     <version>1.0-SNAPSHOT</version>
 
     <!--引入自定义框架的依赖-->
-
+    <dependencies>
+        <dependency>
+            <groupId>com.lagou</groupId>
+            <artifactId>IPersistence</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
