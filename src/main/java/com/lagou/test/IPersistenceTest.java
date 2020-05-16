@@ -9,6 +9,7 @@ import com.lagou.test.pojo.User;
 import org.junit.Test;
 
 import java.io.InputStream;
+import java.util.List;
 
 /**
  * @program: IPersistence
@@ -31,7 +32,13 @@ public class IPersistenceTest {
             //user.setAge("\"十五\"");
             user.setUsername("张三");
             IUserDAO userDAO = sqlSession.getMapper(IUserDAO.class);
+            /*List<User> all = userDAO.findAll();
+            for (User user1:all) {
+                System.out.println(user1.getId());
+                System.out.println(user1.getUsername());
+            }*/
 
+            User user1 = userDAO.findByCondition(user);
         }catch (Exception e){
             e.printStackTrace();
         }
